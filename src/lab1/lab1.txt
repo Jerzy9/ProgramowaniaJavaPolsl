@@ -1,0 +1,174 @@
+package lab1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Lab1 {
+
+    public static void main(String[] args) {
+        new Lab1();
+    }
+
+    public Lab1() {
+        //ZADANIE 1
+        zad1();
+
+        //ZADANIE 2
+        zad2();
+
+        //ZADANIE 3
+        try {
+            zad3();
+        } catch (Exception ex) {
+             ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 4
+        try {
+            zad4();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 5
+        try {
+            zad5();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 6
+        try {
+            zad6();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 7
+        try {
+            zad7();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 8
+        try {
+            zad8();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+    }
+
+    public void zad1() {
+        System.out.println("\nzadanie 1");
+        System.out.println("Konrad Zbylut");
+    }
+
+    public void zad2() {
+        System.out.println("\nzadanie 2");
+        System.out.println("X X");
+        System.out.println(" X ");
+        System.out.println("X X");
+    }
+
+    public  void  zad3() throws IOException {
+        System.out.println("\nzadanie 3");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Liczba pierwsza: ");
+        int a = Integer.parseInt(in.readLine());
+
+        System.out.print("Liczba druga: ");
+        int b = Integer.parseInt(in.readLine());
+
+        //dodawanie
+        System.out.println("dodawanie liczb: " + (a+b));
+        //odejmowanie
+        System.out.println("odejmowanie pierwszej od drugiej: " + (a - b));
+        //mnożenie
+        System.out.println("mnożenie liczb: " + (a*b));
+        //dzielenie
+        if(b == 0) System.out.println("nie dziel przez zero");
+        else {
+            System.out.println("dzielenie pierwszej przez drugą: " + (a / b));
+        }
+    }
+
+    public void zad4() throws IOException, NumberFormatException {
+        System.out.println("\nzadanie 4");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Promień koła: ");
+        int r = Integer.parseInt(in.readLine());
+
+        double d = Math.PI*r*r;
+        System.out.println("Powierzchnia koła: " + d);
+    }
+
+    public void zad5() throws IOException, NumberFormatException {
+        System.out.println("\nzadanie 5");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Podaj kąt: ");
+        double degrees = Integer.parseInt(in.readLine());
+        double radians = degrees / 180;
+
+        System.out.println(radians + " radians");
+    }
+
+    public void  zad6() throws IOException, NumberFormatException {
+        System.out.println("\nzadanie 6");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Podaj wartość dla x: ");
+        double x = Integer.parseInt(in.readLine());
+        int a = 2, b = 4, c = 6, d = 8;
+
+        double wA = a*(Math.pow(x, 2)) + (b*x) + c;
+        System.out.println("A(x) = 2x^2 + 4x + 6               dla x = " + x + "       wynik = " + wA);
+
+        double wB = (a*(Math.pow(x, 3))) + (b*(Math.pow(x, 2))) + (c*x) + d;
+        System.out.println("A(x) = 2x^3 + 4x^2 + 6x + 8        dla x = " + x + "       wynik = " + wB);
+
+    }
+
+    public void zad7() throws IOException, NumberFormatException {
+        System.out.println("\nzadanie 7");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Podaj wartość dla x: ");
+        double x = Integer.parseInt(in.readLine());
+        int a = 2, b = 4, c = 6, d = 8;
+
+        double wA = x*(a*x + b) + c;
+        System.out.println("A(x) = 2x^2 + 4x + 6               dla x = " + x + "       wynik = " + wA);
+
+        double wB = x * (x * (a * x + b) + c) + d;
+        System.out.println("A(x) = 2x^3 + 4x^2 + 6x + 8        dla x = " + x + "       wynik = " + wB);
+
+    }
+
+    public void zad8() throws IOException, NumberFormatException {
+        System.out.println("\nzadanie 8");
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Podaj wartość dla r: ");
+        double r = Integer.parseInt(in.readLine());
+        System.out.print("Podaj wartość dla h: ");
+        double h = Integer.parseInt(in.readLine());
+
+        double p = 2 * Math.PI * r * h;
+        double v = Math.PI * (Math.pow(r,2)) * h;
+
+        System.out.println("Pole powierzchni bocznej walca: " + p);
+        System.out.println("Objętość walca: " + v);
+    }
+}
