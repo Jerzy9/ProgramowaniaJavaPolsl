@@ -11,47 +11,48 @@ public class Lab2 {
     }
 
     public Lab2() {
-//        //ZADANIE 1
-//        try {
-//            zad1();
-//        } catch (Exception ex) {
-//            ex.fillInStackTrace();
-//            System.out.println("Błędna wartość");
-//        }
-//
-//        //ZADANIE 2
-//        try {
-//            zad2();
-//        } catch (Exception ex) {
-//            ex.fillInStackTrace();
-//            System.out.println("Błędna wartość");
-//        }
-//
-//        //ZADANIE 3
-//        try {
-//            zad3();
-//        } catch (Exception ex) {
-//            ex.fillInStackTrace();
-//            System.out.println("Błędna wartość");
-//        }
-//
-        //ZADANIE 5
-//        //ZADANIE 4
-//        try {
-//            zad4();
-//        } catch (Exception ex) {
-//            ex.fillInStackTrace();
-//            System.out.println("Błędna wartość");
-//        }
-        Algorytm algorytm = new Algorytm();
-//
-//        try {
-//            algorytm.zad5();
-//        } catch (Exception ex) {
-//            ex.fillInStackTrace();
-//            System.out.println("Błędna wartość");
-//        }
+        //ZADANIE 1
+        try {
+            zad1();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
 
+        //ZADANIE 2
+        try {
+            zad2();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 3
+        try {
+            zad3();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+        //ZADANIE 4
+        try {
+            zad4();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+        Algorytm algorytm = new Algorytm();
+
+//        ZADANIE 5
+        try {
+            algorytm.zad5();
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+            System.out.println("Błędna wartość");
+        }
+
+//      ZADANIE 6
         try {
             algorytm.zad6();
         } catch (Exception ex) {
