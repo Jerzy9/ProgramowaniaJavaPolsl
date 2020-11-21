@@ -2,9 +2,7 @@ package lab4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,14 +22,15 @@ public class Lab4 {
         //Zadanie 4
 //            zad4();
         //Zadanie 5
-        zad5();
+//        zad5();
         //Zadanie 6
-
+//        zad6();
         //Zadanie 7
-
+//        zad7();
         //Zadanie 8
-
+//        zad8();
         //Zadanie 9
+        zad9();
     }
     public void zad1() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -145,6 +144,72 @@ public class Lab4 {
     }
 
     public void zad6() {
+        Scanner sc = new Scanner(System.in);
+        String input;
+        String pat;
 
+        System.out.println("Podaj słowa do sprawdzania");
+        pat = sc.nextLine();
+
+        input = sc.nextLine();
+        while(input.contains(pat)) {
+            System.out.println(input);
+
+            input = sc.nextLine();
+        }
+    }
+
+    public void zad7() {
+        int tab[] = new int[10];
+        int j =0;
+        for (int i = 0; i < 100; i++) {
+            double d = Math.random();
+            int random = (int) (d*100);
+
+             if (random < 20){
+                 System.out.println(random);
+                 j++;
+
+                 if(j >= 10) break;
+             }
+        }
+    }
+
+    public void zad8() {
+        List<List<Integer>> lists = new ArrayList<>();
+
+        for (int i = 1; i <= 7; i++) {
+            List list = new ArrayList();
+
+            for (int j = 0; j < i; j++) {
+                Random r = new Random();
+                list.add(r.nextInt(10));
+                System.out.print(list.get(j) + ", ");
+            }
+            lists.add(list);
+            System.out.println();
+        }
+    }
+
+    public void zad9() {
+        char[] a = new char[26];
+        char[] b = new char[34];
+        char[] c= new char[34];
+
+        int i = 0;
+
+        for (; i < 26; i++) {
+            a[i] = (char)('a'+i);
+            b[i] = (char)('a'+i);
+            c[i] = (char)('A'+i);
+        }
+        for(var j : "ąęśćżźłó".toCharArray()){
+            b[i] = j;
+            c[i] = (char)(j-1);
+            i++;
+        }
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
     }
 }
