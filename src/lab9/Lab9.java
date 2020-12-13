@@ -11,17 +11,17 @@ public class Lab9 {
 
     public Lab9() {
         //Zadanie 1
-//        zad1();
+        zad1();
         //Zadanie 2
-//        zad2();
+        zad2();
         //Zadanie 3
-//        zad3();
+        zad3();
         //Zadanie 4
-//        zad4();
+        zad4();
         //Zadanie 5
-//        zad5();
+        zad5();
         //Zadanie 6
-//        zad6();
+        zad6();
         //Zadanie 7
         zad7();
 
