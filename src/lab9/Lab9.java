@@ -1,9 +1,7 @@
 package lab9;
 
-import javax.swing.*;
 import java.io.*;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Lab9 {
 
@@ -19,13 +17,13 @@ public class Lab9 {
         //Zadanie 3
 //        zad3();
         //Zadanie 4
-        zad4();
+//        zad4();
         //Zadanie 5
 //        zad5();
         //Zadanie 6
 //        zad6();
         //Zadanie 7
-//        zad7();
+        zad7();
 
     }
 
@@ -144,12 +142,104 @@ public class Lab9 {
         }
 
     }
-    public void zad5() {
+
+    static class Algorytm {
+        public static void bubbleSort(List<Integer> list) {
+            for (int i = 0; i < list.size() - 1; i++) {
+                for (int j = 0; j < list.size() - i - 1; j++)
+
+                    if (list.get(j) > list.get(j + 1)) {
+                        int temp = list.get(j);
+                        list.set(j, list.get(j + 1));
+                        list.set(j + 1, temp);
+                    }
+            }
+        }
+    }
+
+        public void zad5 () {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Podaj liczbe liczb naturalny które wpiszesz z klawiatury");
+        int n;
+        n = in.nextInt();
+
+        List<Integer> tab = new ArrayList<>();
+        System.out.println("Podawaj kolejne liczby");
+        for (int i = 0; i < n; i++) {
+            tab.add(in.nextInt());
+        }
+
+        System.out.println("Przed: " + tab.toString());
+        Algorytm.bubbleSort(tab);
+        System.out.println("Po: " + tab.toString());
+
     }
 
     public void zad6() {
+        File we = new File("we.txt");
+        List<Integer> nums = new ArrayList<>();
+
+        try {
+            Scanner inWe = new Scanner(we);
+            while (inWe.hasNextInt()) {
+                nums.add(inWe.nextInt());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Bład podczas czytania pliku");
+        }
+        System.out.println(nums);
+        Algorytm.bubbleSort(nums);
+        System.out.println(nums);
+
+        try {
+            FileWriter fw = new FileWriter("wyjscie.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            for (int num : nums) {
+                bw.write(Integer.toString(num));
+                bw.write(System.getProperty("line.separator"));
+            }
+            bw.close();
+        } catch (Exception ex) {
+            System.out.println("Błąd podczas zapisywania do pliku");
+            ex.printStackTrace();
+        }
+
     }
 
     private void zad7() {
+        File we = new File("we2.txt");
+        List<Integer> nums = new ArrayList<>();
+
+        try {
+            Scanner inWe = new Scanner(we);
+            while (inWe.hasNextInt()) {
+                nums.add(inWe.nextInt());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Bład podczas czytania pliku");
+        }
+        System.out.println(nums);
+        Algorytm.bubbleSort(nums);
+        System.out.println(nums);
+
+        try {
+            FileWriter fw = new FileWriter("wy2.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            for (int num : nums) {
+                bw.write(Integer.toString(num));
+                bw.write(System.getProperty("line.separator"));
+            }
+            bw.close();
+        } catch (Exception ex) {
+            System.out.println("Błąd podczas zapisywania do pliku");
+            ex.printStackTrace();
+        }
     }
 }
