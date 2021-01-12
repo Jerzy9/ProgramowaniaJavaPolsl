@@ -344,6 +344,7 @@ public class Lab10 {
             setFrame();
         }
         String toPrint = "";
+
         private void btnClicked() {
             String type = "";
             boolean isNumber = false;
