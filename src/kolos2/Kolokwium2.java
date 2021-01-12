@@ -18,13 +18,13 @@ public class Kolokwium2 {
 
     public Kolokwium2() {
         //Zadanie 1
-//        zad1();
+        zad1();
         //Zadanie 2
-//        zad2();
+        zad2();
         //Zadanie 3
-//        zad3();
+        zad3();
         //Zadanie 4
-//        zad4();
+        zad4();
         //Zadanie 5
         zad5();
 
@@ -73,7 +73,7 @@ public class Kolokwium2 {
         Scanner in;
         List<Double> list = new ArrayList<>();
         try {
-            File file = new File("D:\\CodeProjects\\sping_intelij\\lab1\\src\\lab10\\zad2in.txt");
+            File file = new File("kolos2\\zad2in.txt");
              in = new Scanner(file);
         } catch (FileNotFoundException ex) {
             System.out.println("Nie znaleziono pliku");
