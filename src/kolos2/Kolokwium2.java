@@ -1,8 +1,5 @@
 package kolos2;
 
-
-import lab10.Lab10;
-
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
