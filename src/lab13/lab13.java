@@ -16,7 +16,7 @@ public class lab13 {
 
     public lab13() {
         //Zadanie 1
-//        zad1();
+        zad1();
         //Zadanie 2
 //        zad2();
         //Zadanie 3
@@ -24,7 +24,7 @@ public class lab13 {
         //Zadanie 4
 //        zad4();
         //Zadanie 5
-        zad5();
+//        zad5();
         //Zadanie 6
 //        zad6();
     }
